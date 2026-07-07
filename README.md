@@ -1,24 +1,49 @@
+# 🛒 Budget Basket
 
-# Budget Basket
+A console-based supermarket inventory and billing management system developed in **C++**. The project demonstrates the practical application of **Object-Oriented Programming (OOP)**, **modular software design**, and **file-based data persistence** by simulating real-world retail store operations.
 
-Budget Basket is a console-based supermarket inventory and billing system developed in C++. The project demonstrates object-oriented programming principles, file-based data management, and modular software design through a real-world retail management application.
+---
 
-## Overview
+# 📌 Overview
 
-The system provides separate functionalities for administrators, employees, and customers. It enables inventory management, vendor management, customer management, stock tracking, and bill generation while maintaining persistent records using file handling.
+Budget Basket is designed to streamline supermarket operations through role-based access control and efficient inventory management. The system supports administrators, employees, and customers with dedicated functionalities for product management, billing, stock tracking, and customer management while maintaining persistent records using file handling.
 
-## Key Features
+The project emphasizes software engineering principles such as modularity, encapsulation, and reusable class design.
 
-- Role-based access for administrators, employees, and customers
-- Product and inventory management
-- Vendor management
-- Customer registration and management
-- Stock update and tracking
-- Bill generation with support for multiple products
-- Automatic inventory deduction after billing
-- Persistent storage using text files
+---
 
-## Technologies Used
+# ✨ Features
+
+- 👤 Role-Based Access Control
+  - Administrator
+  - Employee
+  - Customer
+
+- 📦 Inventory Management
+  - Add, update, delete, and search products
+  - Stock monitoring
+  - Automatic inventory updates after purchases
+
+- 🏪 Vendor Management
+  - Maintain vendor information
+  - Associate products with vendors
+
+- 👥 Customer Management
+  - Customer registration
+  - Customer information management
+
+- 🧾 Billing System
+  - Generate bills for multiple products
+  - Automatic total calculation
+  - Stock deduction after successful purchase
+
+- 💾 Persistent Storage
+  - File-based data management
+  - Automatic record maintenance
+
+---
+
+# 🛠 Technologies Used
 
 - C++
 - Object-Oriented Programming (OOP)
@@ -26,67 +51,146 @@ The system provides separate functionalities for administrators, employees, and 
 - File Handling
 - Git & GitHub
 
-## System Modules
+---
 
-### Administration
-- Manage products
-- Manage vendors
-- Manage employees
+# 🏗 System Architecture
 
-### Employee Operations
-- View and search products
-- Update stock levels
+```
+                User
+                  │
+        ┌─────────┴─────────┐
+        │                   │
+   Authentication      Role Selection
+        │
+        ▼
+ ┌───────────────┐
+ │ Administrator │
+ ├───────────────┤
+ │ Employee      │
+ ├───────────────┤
+ │ Customer      │
+ └───────────────┘
+        │
+        ▼
+Inventory │ Vendors │ Billing │ Customers
+        │
+        ▼
+      Text Files
+```
+
+---
+
+# 📂 System Modules
+
+## 👨‍💼 Administrator
+
+- Product management
+- Vendor management
+- Employee management
+- Inventory maintenance
+
+---
+
+## 👨‍💻 Employee
+
+- View available products
+- Search products
+- Update inventory
 - Generate customer bills
 
-### Customer Operations
-- Registration and login
-- Product browsing
+---
 
-## Project Structure
+## 🛍 Customer
 
-```text
-Admin.cpp / Admin.h
-Employee.cpp / Employee.h
-Product.cpp / Product.h
-Vendor.cpp / Vendor.h
-Customer.h
-main.cpp
+- Registration
+- Login
+- Browse available products
+
+---
+
+# 📁 Repository Structure
+
+```
+Budget-Basket
+│
+├── Admin.cpp
+├── Admin.h
+├── Employee.cpp
+├── Employee.h
+├── Product.cpp
+├── Product.h
+├── Vendor.cpp
+├── Vendor.h
+├── Customer.cpp
+├── Customer.h
+├── main.cpp
+└── README.md
 ```
 
-## Build and Run
+---
 
-Compile the project:
+# 🚀 Build and Run
+
+### Compile
 
 ```bash
-g++ *.cpp -o main
+g++ *.cpp -o BudgetBasket
 ```
 
-Run the executable:
+### Execute
+
+Linux / macOS
 
 ```bash
-./main
+./BudgetBasket
 ```
 
-## Learning Outcomes
+Windows
+
+```bash
+BudgetBasket.exe
+```
+
+---
+
+# 👨‍💻 My Contributions
+
+- Designed the object-oriented architecture of the system.
+- Developed inventory and product management modules.
+- Implemented customer and vendor management.
+- Built the billing system with automatic stock updates.
+- Integrated persistent storage using file handling.
+- Tested and validated the system under multiple user scenarios.
+
+---
+
+# 🎯 Learning Outcomes
 
 This project strengthened my understanding of:
 
 - Object-Oriented Programming
-- Modular software architecture
-- File-based data persistence
-- Inventory and billing system design
-- Version control using Git and GitHub
+- Class Design and Encapsulation
+- Modular Software Architecture
+- File-Based Data Persistence
+- Inventory Management Systems
+- Billing System Design
+- Software Engineering Best Practices
 
-## Future Enhancements
+---
 
-- Database integration (MySQL/SQLite)
-- Graphical User Interface
-- Sales analytics dashboard
-- Customer purchase history
-- Web-based deployment
+# 🚀 Future Enhancements
 
-## Author
+- MySQL / PostgreSQL integration
+- Graphical User Interface (Qt / JavaFX)
+- Barcode Scanner Integration
+- Sales Analytics Dashboard
+- Customer Purchase History
+- Receipt Printing
+- Web-based Deployment
+- Authentication using Password Encryption
 
-Shubh Patel
+---
 
-GitHub: https://github.com/ShubhPatel1478
+# 📄 License
+
+This project was developed for academic purposes to demonstrate object-oriented programming concepts and software design principles.
